@@ -1,0 +1,57 @@
+HELP.md
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+*.class
+**/data/
+# Firebase secret key
+config/firebase/
+.env
+.env.*
+
+# Mail credentials (Gmail app password)
+src/main/resources/application-local.properties
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+# Mac
+.DS_Store
+
+# BFG
+bfg-*.jar
+
+# Firebase legacy path
+src/main/resources/firebase-service-account.json
+
+config/firebase/

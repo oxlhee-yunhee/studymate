@@ -1,0 +1,11 @@
+build/
+.gradle/
+.vscode/
+.idea/
+*.iml
+HELP.md
+build.gradle.bak
+
+# 자격 증명은 이미지에 절대 넣지 않는다 (환경변수/시크릿으로 주입)
+config/firebase/serviceAccount.json
+src/main/resources/application-local.properties

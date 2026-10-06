@@ -1,0 +1,54 @@
+HELP.md
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+### Firebase (중요) ###
+config/firebase/serviceAccount.json
+**/serviceAccount.json
+
+# 프론트 환경별 설정은 로컬/배포 환경에서 주입하고 예제만 커밋한다.
+frontend/.env.*
+!frontend/.env.example
+
+### OS / 기타 ###
+.DS_Store
+
+# 구버전 H2 데이터 파일 (PostgreSQL 전환 후 미사용)
+studymate/data/
+
+# 임시 백업 파일
+*.bak

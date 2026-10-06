@@ -1,0 +1,25 @@
+# 로컬 개발용 PostgreSQL
+# 실행: docker compose up -d
+# 접속: localhost:5432 / db=studymate / user=studymate / pw=studymate
+name: studymate-v3-postgres
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: studymate-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: studymate
+      POSTGRES_USER: studymate
+      POSTGRES_PASSWORD: studymate
+    ports:
+      - "5432:5432"
+    volumes:
+      - studymate-pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U studymate -d studymate"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  studymate-pgdata:
